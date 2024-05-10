@@ -1,15 +1,22 @@
- const player = function (name1,name2){
-let firstPlayer = name1;
-let secondPlayer = name2;
-return {firstPlayer,secondPlayer};
+function playerCreation(){
+          let firstPlayerName  = prompt("Hello Player-One What's your name");   
+    console.log(`firstPlayerName ${  firstPlayerName}`);
+let secondPlayerName = prompt("Hello Player-Second What's your name");
+console.log(`secondPlayerName  ${ secondPlayerName}`);
 
+
+function playerProfile (){    
+    let firstPlayer = {
+        name: firstPlayerName,
+        sign : 'X',
+    }
+    let secondPlayer = {
+        name:secondPlayerName,
+        sign :'O',
+    }
+
+    let players = {firstPlayer,secondPlayer};
+    console.log(players);
 }
-
- const gameBoard = function(){
-
-let players = player('john','jacob');
-
-console.log(players);
-console.log(players.firstPlayer);
+ return playerProfile(); 
 }
- let game = gameBoard();
