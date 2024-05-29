@@ -27,7 +27,7 @@ function gameBoard(){        // Creates empty Game-Board........................
     board[i]=[];
 for (let j=0;j<columns;j++){
   board[i].push(cell);
-
+console.log(board[0].length);
 }
 }
 
@@ -37,22 +37,23 @@ function firstPlayerResult(){
   let row1=  board[0];
   let row2 = board[1];
   let row3  = board[2];
+  let testStr = 'X';
   let rowTest = (str)=> { return str === 'X'}
-  if (row1.length ===3 &&row1.every(rowTest)=== true){  
+  if (row1.length ===3 && row1.every(rowTest)=== true){  
   return true;
-  } else if (row2.length ===3 &&row2.every(rowTest)=== true){
+  } else if (row2.length === 3 && row2.every(rowTest)=== true){
       return true;
-  }else if (row3.length ===3 &&row3.every(rowTest)=== true){
+  }else if (row3.length === 3 && row3.every(rowTest)=== true){
       return true;
-  }else if (row1[0]&& row2[1]&&row3[2]==='X'){
+  }else if (row1[0]=== testStr && row2[1]=== testStr &&row3[2]===testStr){ 
       return true;
-  }else if (row1[2] && row2[1]&& row3[0] ==='X'){
+  }else if (row1[2]=== testStr && row2[1]=== testStr &&row3[0]===testStr){
       return true;
-  } else if (row1[0]&& row2[0]&& row3[0]==='X'){
+  } else if (row1[0]=== testStr && row2[0]=== testStr &&row3[0]===testStr){
       return true;
-  } else if (row1[1]&& row2[1]&& row3[1]==='X'){
+  } else if (row1[1]=== testStr && row2[1]=== testStr &&row3[1]===testStr){
       return true;
-  }else if (row1[2]&& row2[2]&& row3[2]==='X'){
+  }else if (row1[2]=== testStr && row2[2]=== testStr &&row3[2]===testStr){
       return true;
   }
    }
@@ -61,25 +62,26 @@ function firstPlayerResult(){
     let row1=  board[0];
     let row2 = board[1];
     let row3  = board[2];
+    let testStr ='O'
     let rowTest = (str)=> { return str === 'O'}
     if (row1.length ===3 &&row1.every(rowTest)=== true){  
     return true;
-    } else if (row2.length ===3 &&row2.every(rowTest)=== true){
+    } else if (row2.length ===3 &&row2.every(rowTest)=== true){ //conditions for rows.............
         return true;
-    }else if (row3.length ===3 &&row3.every(rowTest)=== true){
+    }else if (row3.length ===3 &&row3.every(rowTest)=== true){ //conditions for rows...............
         return true;
-    }else if (row1[0]&& row2[1]&&row3[2]==='O'){
-        return true;
-    }else if (row1[2] && row2[1]&& row3[0] ==='O'){
-        return true;
-    } else if (row1[0]&& row2[0]&& row3[0]==='O'){
-        return true;
-    } else if (row1[1]&& row2[1]&& row3[1]==='O'){
-        return true;
-    }else if (row1[2]&& row2[2]&& row3[2]==='O'){
-        return true;
-    }
-     }
+    }else if (row1[0]=== testStr && row2[1]=== testStr &&row3[2]===testStr){
+      return true;
+  }else if (row1[2]=== testStr && row2[1]=== testStr &&row3[0]===testStr){
+      return true;
+  } else if (row1[0]=== testStr && row2[0]=== testStr &&row3[0]===testStr){
+      return true;
+  } else if (row1[1]=== testStr && row2[1]=== testStr &&row3[1]===testStr){
+      return true;
+  }else if (row1[2]=== testStr && row2[2]=== testStr &&row3[2]===testStr){
+      return true;
+  }
+   }
 
 
 
