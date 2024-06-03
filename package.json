@@ -1,5 +1,5 @@
 {
-  "name": "tictactoe",
+  "name": "game",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
@@ -9,6 +9,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "tailwindcss": "^3.4.3"
+    "@tailwind.css/aspect-ratio": "^0.4.2",
+    "@tailwind.css/forms": "^0.5.7",
+    "@tailwind.css/line-clamp": "^0.4.4",
+    "@tailwind.css/typography": "^0.5.13",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwind.css": "^3.4.3"
   }
 }
